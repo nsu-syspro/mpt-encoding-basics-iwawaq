@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-
-# Вывести дату в формате:
-#   Freitag, 13. Oktober 2023
-date '+???' -d "$@"
+#!/bin/bash
+date1='2023-10-13'
+export LC_TIME=de_DE.UTF-8
+date2=$(date -d "$date1" '+%A, %d. %B %Y')
+echo "$date2"
