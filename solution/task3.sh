@@ -4,4 +4,4 @@
 #   13 октября 2023 года, Пятница
 export LC_ALL="ru_RU.UTF-8"
 date2='+%e %B %Y года, %A'
-date "$date2" -d "$@"
+date "$date2" -d "$@" | sed s'/^ *//'
