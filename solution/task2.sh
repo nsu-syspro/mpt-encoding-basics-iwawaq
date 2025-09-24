@@ -1,3 +1,5 @@
-read time_str
-date '+%H час/а/ов %M минут/ы' -d "$time_str"
-unset time_str
+#!/usr/bin/env bash
+
+# Вывести время в формате:
+#   15 час/а/ов 23 минут/ы
+date '+%H час/а/ов %M минут/ы' -d "$@"

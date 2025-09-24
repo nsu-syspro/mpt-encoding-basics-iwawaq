@@ -1,4 +1,7 @@
-read date1
-export LC_TIME=ru_RU.UTF-8
-date2=$(date -d "$date1" '+%d %B %Y года, %A')
-echo "$date2"
+#!/usr/bin/env bash
+
+# Вывести дату в формате:
+#   13 октября 2023 года, Пятница
+export LC_ALL="ru_RU.UTF-8"
+date2='+%e %B %Y года, %A'
+date "$date2" -d "$@"
